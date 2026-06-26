@@ -22,7 +22,22 @@ jobs:
           pip install -r requirements.txt
           playwright install --with-deps
 
+      # 🔍 DEBUG STEP (temporary)
+      - name: Debug environment
+        run: |
+          echo "=== PWD ==="
+          pwd
+
+          echo "=== FILE STRUCTURE ==="
+          ls -R
+
+          echo "=== PYTHONPATH ==="
+          python -c "import sys; print('\n'.join(sys.path))"
+
+      # 🧪 Run tests
       - name: Run tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: pytest -s
 
       - name: Upload HTML report
