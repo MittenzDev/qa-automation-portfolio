@@ -1,5 +1,7 @@
 # QA Automation Portfolio Project
 
+![Portfolio QA Tests](https://github.com/MittenzDev/qa-automation-portfolio/actions/workflows/tests.yml/badge.svg)
+
 This project is a lightweight QA automation framework built with **Python, Playwright, and Requests**, designed to validate both:
 
 - UI content (portfolio pages)
